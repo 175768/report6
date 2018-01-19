@@ -6,6 +6,9 @@ public class DiceRev {
         int eye;
         int n = 0;
         int m = 1;
+        int o = 0;
+        double score;
+        double score1;
         double num = 0.83;
         double num1;
         double num2;
@@ -26,8 +29,10 @@ public class DiceRev {
                 m++;
 
                 if (eye == 1) {
-                    break;
-                }
+                    score1=Math.pow(11,o);
+                    score=2*o+score1*o+101*o;
+                    System.out.println("\nスコア"+Math.round(score));
+                    break; }
 
                 num1 =Math.pow(num,m)*100;
                 System.out.println("\n"+m+"回目");
@@ -36,7 +41,11 @@ public class DiceRev {
                 String anser1 = sc.next();
 
                 if (anser1.equals("yes")){}
-                else{break;}
+                else{
+                    score1=Math.pow(2,n);
+                    score=score1*n;
+                    System.out.println("\nスコア"+Math.round(score));
+                    break;}
 
             }
             System.out.println("\n今回の記録は"+n+"回でした");
